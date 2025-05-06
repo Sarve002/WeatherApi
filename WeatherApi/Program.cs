@@ -7,8 +7,12 @@ namespace WeatherApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            
 
+            // ? Logging is already configured by default in ASP.NET Core
+            // But you can explicitly set log level here:
+            builder.Logging.ClearProviders();
+            builder.Logging.AddConsole(); // ? Ensure logging to console is enabled
+            builder.Logging.SetMinimumLevel(LogLevel.Information); // ? Show Information and above
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -27,10 +31,7 @@ namespace WeatherApi
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();
