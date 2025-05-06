@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\steve\\source\\repos\\WeatherApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\models\\weatherresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|solutionrelative:weatherapi\\controllers\\weathercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAA83512-5AEB-434C-AD30-9C47D9D1BF78}|WeatherApi\\WeatherApi.csproj|c:\\users\\steve\\source\\repos\\weatherapi\\weatherapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,33 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\.gitignore",
-              "RelativeDocumentMoniker": "WeatherApi\\.gitignore",
-              "ToolTip": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\.gitignore",
-              "RelativeToolTip": "WeatherApi\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-06T23:06:27.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "WeatherResponse.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Models\\WeatherResponse.cs",
               "RelativeDocumentMoniker": "WeatherApi\\Models\\WeatherResponse.cs",
               "ToolTip": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Models\\WeatherResponse.cs",
               "RelativeToolTip": "WeatherApi\\Models\\WeatherResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T22:59:22.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WeatherApi\\WeatherForecast.cs",
@@ -84,33 +67,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "WeatherService.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Services\\WeatherService.cs",
               "RelativeDocumentMoniker": "WeatherApi\\Services\\WeatherService.cs",
               "ToolTip": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Services\\WeatherService.cs",
               "RelativeToolTip": "WeatherApi\\Services\\WeatherService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBoAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T22:13:23.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Program.cs",
               "RelativeDocumentMoniker": "WeatherApi\\Program.cs",
               "ToolTip": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Program.cs",
               "RelativeToolTip": "WeatherApi\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T21:51:20.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "WeatherController.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Controllers\\WeatherController.cs",
               "RelativeDocumentMoniker": "WeatherApi\\Controllers\\WeatherController.cs",
@@ -118,12 +101,11 @@
               "RelativeToolTip": "WeatherApi\\Controllers\\WeatherController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T19:56:59.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T19:56:59.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\steve\\source\\repos\\WeatherApi\\WeatherApi\\Models\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WeatherApi\\Models\\WeatherForecast.cs",
