@@ -1,21 +1,25 @@
-﻿namespace WeatherApi.Models
+﻿namespace WeatherApi.Services
 {
     public class WeatherResponse
     {
         public Main Main { get; set; }
+        public Wind Wind { get; set; }
         public List<Weather> Weather { get; set; }
-        public string Name { get; set; }
     }
 
     public class Main
     {
-        public float Temp { get; set; }
-        public int Humidity { get; set; }
+        public double Temp { get; set; }
+        public double Humidity { get; set; }
+    }
+
+    public class Wind
+    {
+        public double Speed { get; set; }
     }
 
     public class Weather
     {
-        public string Main { get; set; }
         public string Description { get; set; }
     }
 }

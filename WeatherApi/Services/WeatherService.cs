@@ -3,7 +3,10 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using DotNetEnv;
 using WeatherApi.Models;
-using Microsoft.Extensions.Logging; // ✅ Import ILogger
+using Microsoft.Extensions.Logging; // Import ILogger
+using WeatherApi.DTOs;  // Import DTO namespace
+using WeatherApi.Services;  // Import the WeatherResponse model namespace
+
 
 namespace WeatherApi.Services
 {
@@ -25,36 +28,41 @@ namespace WeatherApi.Services
         }
 
         // ✅ Method to fetch weather data
-        public async Task<WeatherResponse?> GetWeatherAsync(string city)
+        public async Task<WeatherDto?> GetWeatherAsync(string city)
         {
             try
             {
-                // ✅ Log the API call
                 _logger.LogInformation($"Fetching weather for city: {city}");
 
                 var url = $"{BaseUrl}?q={city}&appid={ApiKey}&units=metric";
-                var result = await _httpClient.GetFromJsonAsync<WeatherResponse>(url);
+                var response = await _httpClient.GetFromJsonAsync<WeatherResponse>(url); // Deserialize the response into WeatherResponse
 
-                if (result == null)
+                if (response == null)
                 {
                     _logger.LogWarning($"Weather data for '{city}' was null.");
-                }
-                else
-                {
-                    _logger.LogInformation($"Successfully retrieved weather for: {city}");
+                    return null;
                 }
 
-                return result;
+                // Map to DTO
+                var weatherDto = new WeatherDto
+                {
+                    City = city,
+                    Temperature = response.Main.Temp,
+                    Description = response.Weather[0].Description,
+                    Humidity = response.Main.Humidity,
+                    WindSpeed = response.Wind.Speed
+                };
+
+                _logger.LogInformation($"Successfully retrieved weather for: {city}");
+                return weatherDto;
             }
             catch (HttpRequestException ex)
             {
-                // ✅ Log HTTP errors
                 _logger.LogError(ex, $"HTTP error occurred while fetching weather for '{city}'.");
                 return null;
             }
             catch (Exception ex)
             {
-                // ✅ Log unexpected exceptions
                 _logger.LogError(ex, $"Unexpected error occurred while fetching weather for '{city}'.");
                 return null;
             }
