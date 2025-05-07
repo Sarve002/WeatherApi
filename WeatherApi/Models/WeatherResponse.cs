@@ -29,5 +29,7 @@
     {
         public string Main { get; set; }         // Main weather condition (e.g., "Clear", "Rain")
         public string Description { get; set; }  // Detailed description (e.g., "clear sky")
+        public string Icon { get; set; }         // Icon code (e.g., "01d" for a clear day)
     }
+
 }

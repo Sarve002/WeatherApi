@@ -1,38 +1,109 @@
-.App {
+/* General reset for the body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #faf0e6; /* Linen background */
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+/* Weather card styles */
+.weather-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.weather-card h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.weather-card .description {
+  font-size: 1.2em;
+  color: #95a5a6;
+}
+
+.weather-card .temp,
+.weather-card .humidity,
+.weather-card .windspeed {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.error {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .weather-card {
+    width: 95%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*updated css for add style*/
+
+/* Container for the whole app */
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
+}
+
+/* Button group styling */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Weather info layout */
+.weather-info {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0e4d7; /* Slightly darker linen shade */
+  color: #2c3e50; /* Dark text for readability */
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* Larger weather icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
 }

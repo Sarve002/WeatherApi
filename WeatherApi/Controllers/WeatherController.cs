@@ -14,7 +14,6 @@ namespace WeatherApi.Controllers
             _weatherService = weatherService;
         }
 
-
         [HttpGet("{city}")]
         public async Task<IActionResult> GetWeather(string city)
         {
@@ -23,8 +22,19 @@ namespace WeatherApi.Controllers
             if (weather == null)
                 return NotFound($"Weather data for '{city}' not found.");
 
-            return Ok(weather); // Now returns the WeatherDto
+            return Ok(weather);
         }
 
+        // Endpoint for coordinates
+        [HttpGet("coords")]
+        public async Task<IActionResult> GetWeatherByCoords([FromQuery] double lat, [FromQuery] double lon)
+        {
+            var weather = await _weatherService.GetWeatherByCoordinatesAsync(lat, lon);
+
+            if (weather == null)
+                return NotFound($"Weather data for coordinates ({lat}, {lon}) not found.");
+
+            return Ok(weather);
+        }
     }
 }

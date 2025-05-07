@@ -60,7 +60,41 @@ namespace WeatherApi.Services
             }
         }
 
-        // Method to map WeatherResponse to WeatherDto
+        // ✅ Method to fetch weather by coordinates
+        public async Task<WeatherDto?> GetWeatherByCoordinatesAsync(double lat, double lon)
+        {
+            try
+            {
+                _logger.LogInformation($"Fetching weather for coordinates: lat = {lat}, lon = {lon}");
+
+                var url = $"{BaseUrl}?lat={lat}&lon={lon}&appid={ApiKey}&units=metric";
+                var response = await _httpClient.GetFromJsonAsync<WeatherResponse>(url);
+
+                if (response == null)
+                {
+                    _logger.LogWarning($"Weather data for coordinates ({lat}, {lon}) was null.");
+                    return null;
+                }
+
+                // Map the WeatherResponse to a WeatherDto
+                var weatherDto = MapToWeatherDto(response, response.Name);
+
+                _logger.LogInformation($"Successfully retrieved weather for coordinates: lat = {lat}, lon = {lon}");
+                return weatherDto;
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, $"HTTP error occurred while fetching weather for coordinates ({lat}, {lon}).");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Unexpected error occurred while fetching weather for coordinates ({lat}, {lon}).");
+                return null;
+            }
+        }
+
+        // ✅ Helper method to map WeatherResponse to WeatherDto
         private WeatherDto MapToWeatherDto(WeatherResponse response, string city)
         {
             return new WeatherDto
@@ -69,8 +103,10 @@ namespace WeatherApi.Services
                 Temperature = response.Main.Temp,          // Map Temp from WeatherResponse
                 Description = response.Weather[0].Description,  // Map Description from WeatherResponse
                 Humidity = response.Main.Humidity,        // Map Humidity from WeatherResponse
-                WindSpeed = response.Wind.Speed           // Map WindSpeed from WeatherResponse
+                WindSpeed = response.Wind.Speed,          // Map WindSpeed from WeatherResponse
+                Icon = response.Weather[0].Icon           // Map Icon from WeatherResponse
             };
         }
     }
 }
+

@@ -7,6 +7,7 @@ namespace WeatherApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
             // ? Logging is already configured by default in ASP.NET Core
             // But you can explicitly set log level here:
@@ -21,6 +22,18 @@ namespace WeatherApi
             builder.Services.AddSwaggerGen();
             builder.Services.AddHttpClient<WeatherService>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:3000") // Allow React frontend
+                              .AllowAnyHeader()                     // Allow any headers (e.g. Content-Type)
+                              .AllowAnyMethod();                    // Allow GET, POST, etc.
+                    });
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,6 +44,7 @@ namespace WeatherApi
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseAuthorization();
             app.MapControllers();
 

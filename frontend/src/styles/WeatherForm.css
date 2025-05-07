@@ -1,0 +1,30 @@
+/* WeatherForm Styles */
+.weather-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .weather-form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .weather-form button:hover {
+    background-color: #2980b9;
+  }
+  
