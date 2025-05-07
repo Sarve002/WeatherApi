@@ -7,7 +7,6 @@ using Microsoft.Extensions.Logging; // Import ILogger
 using WeatherApi.DTOs;  // Import DTO namespace
 using WeatherApi.Services;  // Import the WeatherResponse model namespace
 
-
 namespace WeatherApi.Services
 {
     public class WeatherService
@@ -43,15 +42,8 @@ namespace WeatherApi.Services
                     return null;
                 }
 
-                // Map to DTO
-                var weatherDto = new WeatherDto
-                {
-                    City = city,
-                    Temperature = response.Main.Temp,
-                    Description = response.Weather[0].Description,
-                    Humidity = response.Main.Humidity,
-                    WindSpeed = response.Wind.Speed
-                };
+                // Map the WeatherResponse to a WeatherDto
+                var weatherDto = MapToWeatherDto(response, city);
 
                 _logger.LogInformation($"Successfully retrieved weather for: {city}");
                 return weatherDto;
@@ -66,6 +58,19 @@ namespace WeatherApi.Services
                 _logger.LogError(ex, $"Unexpected error occurred while fetching weather for '{city}'.");
                 return null;
             }
+        }
+
+        // Method to map WeatherResponse to WeatherDto
+        private WeatherDto MapToWeatherDto(WeatherResponse response, string city)
+        {
+            return new WeatherDto
+            {
+                City = city,
+                Temperature = response.Main.Temp,          // Map Temp from WeatherResponse
+                Description = response.Weather[0].Description,  // Map Description from WeatherResponse
+                Humidity = response.Main.Humidity,        // Map Humidity from WeatherResponse
+                WindSpeed = response.Wind.Speed           // Map WindSpeed from WeatherResponse
+            };
         }
     }
 }

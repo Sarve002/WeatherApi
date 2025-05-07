@@ -1,10 +1,17 @@
-﻿namespace WeatherApi.Tests;
+﻿using Xunit;
 
-public class UnitTest1
+public class WeatherApiTests
 {
     [Fact]
-    public void Test1()
+    public void Test_If_Sample_Passes()
     {
+        // Arrange
+        var expected = true;
 
+        // Act
+        var result = true; // This is just a simple example.
+
+        // Assert
+        Assert.Equal(expected, result);
     }
 }

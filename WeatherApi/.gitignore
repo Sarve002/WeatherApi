@@ -1,18 +1,26 @@
+# Ignore Visual Studio temp files, build results, and user-specific files
+.vs/
+*.user
+*.suo
+
 # Build results
 bin/
 obj/
 
-# User-specific files
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
+# Others
+*.log
+*.cache
+*.vsidx
+*.dbmdl
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+*.dll
+*.exe
+*.json
 
-# Rider
-.idea/
-
-# Visual Studio
-.vs/
+# Test Results
+TestResults/
 
 # VS Code
 .vscode/
