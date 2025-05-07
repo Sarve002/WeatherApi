@@ -14,6 +14,7 @@ namespace WeatherApi.Controllers
             _weatherService = weatherService;
         }
 
+
         [HttpGet("{city}")]
         public async Task<IActionResult> GetWeather(string city)
         {
@@ -22,7 +23,8 @@ namespace WeatherApi.Controllers
             if (weather == null)
                 return NotFound($"Weather data for '{city}' not found.");
 
-            return Ok(weather);
+            return Ok(weather); // Now returns the WeatherDto
         }
+
     }
 }
