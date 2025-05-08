@@ -6,7 +6,7 @@ This project is a weather application built with React for the frontend and ASP.
 
 Here’s a screenshot of the weather app running:
 
-![Weather App Screenshot]("C:\Users\steve\OneDrive\Pictures\WeatherApp-Screenshot.png")
+![WeatherApp-Screenshot](https://github.com/user-attachments/assets/d1b4b7b7-bf62-4f25-9625-6f2cdceeb7ed)
 
 ## Features
 - Fetch current weather data by city name
