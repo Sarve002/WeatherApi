@@ -2,6 +2,12 @@
 
 This project is a weather application built with React for the frontend and ASP.NET Core for the backend. The app allows users to search for weather data by city name or get weather information based on their current location. The backend fetches data from the OpenWeatherMap API and serves it to the frontend.
 
+### Screenshot
+
+Here’s a screenshot of the weather app running:
+
+![Weather App Screenshot]("C:\Users\steve\OneDrive\Pictures\WeatherApp-Screenshot.png")
+
 ## Features
 - Fetch current weather data by city name
 - Fetch current weather data based on geolocation coordinates
