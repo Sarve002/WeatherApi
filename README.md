@@ -1,6 +1,6 @@
-# Weather App (Frontend & Backend)
+# 🌤 WeatherApi
 
-This project is a weather application built with React for the frontend and ASP.NET Core for the backend. The app allows users to search for weather data by city name or get weather information based on their current location. The backend fetches data from the OpenWeatherMap API and serves it to the frontend.
+**WeatherApi** is a full-stack weather forecast application built using **ASP.NET Core 8 (C#)** for the backend and **React** for the frontend. It consumes a third-party weather API and displays current and forecasted weather data in a modern UI.
 
 ### Screenshot
 
@@ -8,44 +8,100 @@ Here’s a screenshot of the weather app running:
 
 ![WeatherApp-Screenshot](https://github.com/user-attachments/assets/d1b4b7b7-bf62-4f25-9625-6f2cdceeb7ed)
 
-## Features
-- Fetch current weather data by city name
-- Fetch current weather data based on geolocation coordinates
-- Toggle between Celsius and Fahrenheit for temperature display
-- Display current temperature, humidity, wind speed, weather description, and an icon for the weather conditions
 
----
+## 🔧 Backend (.NET) Details
 
-## Backend - Weather API (ASP.NET Core)
-
-This is the backend for the weather application built with ASP.NET Core. It consumes the OpenWeatherMap API to provide weather data based on either a city name or the user's geolocation coordinates.
-
-### Features
-- Fetch current weather data by city name
-- Fetch current weather data based on geolocation coordinates
-- Supports temperature in Celsius
-- Handles errors with meaningful messages
-
-### Prerequisites
-- .NET 6.0 or higher
-- OpenWeatherMap API key (sign up at https://openweathermap.org/)
-
----
-
-## Technologies used
-- ASP.NET CORE 6.0
-- OpenWeatherMap API
-- .NET 6.0
+### Technologies Used
+- ASP.NET Core 8
 - C#
-- React(v17 or higher)
-- Node.js(v16 or higher)
-- CSS (For Styling)
-- Fetch API (for communication with backend)
+- RESTful API Architecture
+- JSON-based configuration
+- Dependency Injection
+- DTO Pattern
+- Weather API Integration
 
-### Getting Started
+### Key Features
+- Fetches weather data from an external API
+- Clean architecture using services, DTOs, and models
+- API endpoints via Controllers
+- Configurable through `appsettings.json`
+- Structured logging and environment setup
 
-#### 1. Clone the Repository
-Clone this repo to your local machine.
+### Notable Files
+- `Program.cs` - Main app entry
+- `Controllers/WeatherController.cs` - Handles API routes
+- `Services/WeatherService.cs` - Core logic for weather fetching
+- `Models/` and `DTOs/` - Typed classes for clean data transfer
+- `Properties/launchSettings.json` - Development configuration
 
+
+
+## 🌐 Frontend (React) Details
+
+### Technologies Used
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint for linting and best practices
+- Likely uses Axios or Fetch for API calls
+
+### Key Features
+- Displays weather information in a responsive layout
+- Connects to the .NET backend to retrieve data
+- Tailwind CSS used for modern styling
+- Organized frontend architecture with reusable components
+
+
+
+## 📂 Project Structure
+
+```
+WeatherApi/
+├── WeatherApi/                # Backend (C# ASP.NET Core)
+│   ├── Controllers/
+│   ├── DTOs/
+│   ├── Models/
+│   ├── Services/
+│   ├── Properties/
+│   ├── appsettings.json
+│   ├── WeatherApi.csproj
+│   └── Program.cs
+└── frontend/frontend-react/   # Frontend (React)
+    ├── node_modules/
+    ├── public/
+    ├── src/
+    └── package.json
+```
+
+
+
+## 🚀 Getting Started
+
+### Backend Setup
 ```bash
-git clone https://github.com/yourusername/weather-api-backend.git
+cd WeatherApi/WeatherApi
+dotnet restore
+dotnet run
+```
+
+### Frontend Setup
+```bash
+cd frontend/frontend-react
+npm install
+npm start
+```
+
+
+
+## 📌 TODOs & Improvements
+
+- Add error handling for failed API calls
+- Unit tests for services and controllers
+- Add environment-specific configurations for deployment
+- Docker support for both frontend and backend
+
+
+
+## 📃 License
+
+This project is licensed under the MIT License.
